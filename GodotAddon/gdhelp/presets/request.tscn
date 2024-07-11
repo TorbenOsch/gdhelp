@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://wim050sj6qru"]
+
+[ext_resource type="Script" path="res://addons/gdhelp/scripts/message.gd" id="1_wiuk2"]
+[ext_resource type="Theme" uid="uid://bebt47k4t4358" path="res://addons/gdhelp/themes/main_theme.tres" id="2_s7pny"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchors_preset = -1
+anchor_left = 0.004
+anchor_right = 0.996
+offset_left = 0.392
+offset_right = -0.39209
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("1_wiuk2")
+
+[node name="text" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_s7pny")
+horizontal_alignment = 2
+autowrap_mode = 1
+
+[node name="time_text" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_s7pny")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 2
+vertical_alignment = 2

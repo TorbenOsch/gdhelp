@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://daqusdnbqenn8"]
+
+[ext_resource type="Script" path="res://addons/gdhelp/scripts/message.gd" id="1_euxbq"]
+[ext_resource type="Theme" uid="uid://bebt47k4t4358" path="res://addons/gdhelp/themes/main_theme.tres" id="2_td7hq"]
+[ext_resource type="Texture2D" uid="uid://c1dleu27dp5uk" path="res://addons/gdhelp/images/copy.svg" id="3_t31d1"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchors_preset = -1
+anchor_left = 0.004
+anchor_right = 0.996
+offset_left = 0.392
+offset_right = -0.39209
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("1_euxbq")
+
+[node name="time_text" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_td7hq")
+theme_override_font_sizes/font_size = 10
+vertical_alignment = 2
+
+[node name="copy_btn" type="Button" parent="."]
+layout_mode = 2
+theme = ExtResource("2_td7hq")
+icon = ExtResource("3_t31d1")
+vertical_icon_alignment = 2
+
+[node name="text" type="Label" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_td7hq")
+autowrap_mode = 1
+
+[connection signal="pressed" from="copy_btn" to="." method="_on_copy_btn_pressed"]
